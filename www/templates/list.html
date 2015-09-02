@@ -1,0 +1,25 @@
+<ion-view view-title="ימי איסוף אשפה">
+
+  
+<div class="bar bar-subheader 
+  item-input-inset bar-light">
+  <label class="item-input-wrapper">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="search" ng-model="query" placeholder="אני גר ברחוב..">
+  </label>
+</div>
+<ion-content 
+  class="has-subheader">
+ 
+  <ion-list>
+    <ion-item 
+    ng-repeat='item in artists | filter: query'
+    class=" item-icon-right
+      item-text-wrap " >
+      <h2>{{item.name}}</h2>
+      <h3>{{item.days}}</h3>
+  
+    </ion-item>
+  </ion-list>
+</ion-content>
+</ion-view>
